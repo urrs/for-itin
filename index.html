@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#100b20">
+  <meta name="description" content="A gift for Itin — sebuah permainan kecil untuk Chrisitin.">
+  <title>A gift for Itin ✦</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div class="star-layer" aria-hidden="true" id="starLayer"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="A gift for Itin"><span class="brand-mark">✦</span><span>A gift for Itin</span></a>
+      <span class="top-note">a tiny game, from my heart</span>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="eyebrow"><span></span> MADE WITH A LITTLE COURAGE <span></span></div>
+      <h1>For you,<br><em>Chrisitin.</em></h1>
+      <p class="intro-copy">Ada sesuatu yang ingin aku sampaikan. Tapi sebelum itu,<br class="desktop-break"> mau main satu permainan kecil denganku?</p>
+      <button class="primary-btn" id="startBtn"><span>Mulai permainan</span><b>↗</b></button>
+      <div class="intro-foot"><span class="tiny-heart">♡</span> made just for you <span class="tiny-heart">♡</span></div>
+    </section>
+
+    <section class="game-section hidden" id="gameSection" aria-label="Permainan mencocokkan kartu">
+      <div class="game-heading">
+        <div><div class="eyebrow left">A game just for you Itin</div><h2>Temukan semua <em>pasangannya.</em></h2></div>
+        <p class="game-hint">Buka dua kartu dan cari<br class="desktop-break"> pasangan yang sama.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="stat-icon">✧</span><div><small>LANGKAH</small><strong id="moves">00</strong></div></div>
+        <div class="stat"><span class="stat-icon">♡</span><div><small>TERTEMUKAN</small><strong id="matched">0 <i>/ 4</i></strong></div></div>
+        <div class="stat"><span class="stat-icon">◷</span><div><small>WAKTU</small><strong id="timer">00:00</strong></div></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="board" id="board">
+        <button class="memory-card" data-card="moon" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/moon.svg" alt="Bulan dan bintang"><span>moonlight</span></span></span></button>
+        <button class="memory-card" data-card="flower" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/flower.svg" alt="Bunga merah muda"><span>little bloom</span></span></span></button>
+        <button class="memory-card" data-card="teddy" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/teddy.svg" alt="Boneka beruang"><span>soft hugs</span></span></span></button>
+        <button class="memory-card" data-card="star" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/star.svg" alt="Bintang bercahaya"><span>stardust</span></span></span></button>
+        <button class="memory-card" data-card="star" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/star.svg" alt="Bintang bercahaya"><span>stardust</span></span></span></button>
+        <button class="memory-card" data-card="teddy" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/teddy.svg" alt="Boneka beruang"><span>soft hugs</span></span></span></button>
+        <button class="memory-card" data-card="moon" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/moon.svg" alt="Bulan dan bintang"><span>moonlight</span></span></span></button>
+        <button class="memory-card" data-card="flower" aria-label="Kartu tertutup"><span class="card-inner"><span class="card-face card-back"><span class="back-spark">✦</span><span class="back-heart">♡</span></span><span class="card-face card-front"><img src="assets/images/flower.svg" alt="Bunga merah muda"><span>little bloom</span></span></span></button>
+      </div>
+      <div class="game-bottom"><span><i class="pulse-dot"></i> Take your time, no rush.</span><button class="restart-btn" id="restartBtn">↻ <span>Ulangi</span></button></div>
+    </section>
+
+    <section class="ending hidden" id="ending">
+      <div class="ending-glow"></div>
+      <div class="ending-icon">✧</div>
+      <div class="eyebrow">YOU FOUND EVERY LITTLE THING</div>
+      <h2>One last thing,<br><em>my dear.</em></h2>
+      <div class="letter">
+        <div class="letter-top"><span>♡</span><span>A LITTLE NOTE FOR YOU</span><span>♡</span></div>
+        <p>Maafin aku, sayang.</p>
+        <p>Aku sadar menonton konten itu bikin kamu dak nyaman. Aku dk bermaksud buat Itin kecewa atau sakit. Aku gek menghindari kelakuan yang dk Itin suka.</p>
+        <p>Maafin aku, Itin.</p>
+        <div class="letter-sign">with love, <span>♡</span></div>
+      </div>
+
+      <figure class="memory-photo">
+        <div class="photo-frame">
+          <span class="photo-corner corner-tl">✦</span>
+          <img src="assets/images/pic_Love.jpg" alt="A special photo of us" class="love-photo">
+          <span class="photo-corner corner-br">♡</span>
+        </div>
+        <figcaption>one of my favorite little moments <span>♡</span></figcaption>
+      </figure>
+      <p class="ending-foot">Aku akan jadi lebih baik lagi.<br>Terima kasih sudah mau membaca sampai sini.</p>
+      <div class="ending-actions">
+        <button class="primary-btn" id="copyBtn"><span>Salin pesan ini</span><b>⌁</b></button>
+        <button class="text-btn" id="againBtn">Main lagi dari awal ↗</button>
+      </div>
+    </section>
+    <footer class="footer"><span>✦</span> a small page, with sincere feelings <span>✦</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
